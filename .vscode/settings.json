@@ -19,5 +19,10 @@
   },
   "files.associations": {
     "*.css": "tailwindcss"
+  },
+  // 参考：https://dev.classmethod.jp/articles/vscode-custom-tab-labels-for-better-coding/
+  "workbench.editor.customLabels.patterns": {
+    "src/app/**/{*.tsx,route.ts,actions.ts}": "🌐 ${dirname(1)}/${dirname} ∙ ${filename}",
+    "src/components/**/*": "🧩 ${dirname}/${filename}.${extname}"
   }
 }

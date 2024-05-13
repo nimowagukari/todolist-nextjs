@@ -6,9 +6,9 @@
 
 次回やること：
 
-- README.md 修正
 - route.ts で API 実装
   - シンプル CRUD
+- API テストコード作成
 
 その次やること：
 
