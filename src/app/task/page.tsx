@@ -2,8 +2,8 @@ import { Task } from "../api/task/data";
 
 async function getData() {
   const base_url =
-    "VERCEL_URL" in process.env
-      ? `https://${process.env.VERCEL_URL}`
+    "VERCEL_BRANCH_URL" in process.env
+      ? `https://${process.env.VERCEL_BRANCH_URL}`
       : "http://localhost:3000";
   const res = await fetch(`${base_url}/api/task`, { cache: "no-store" });
 
