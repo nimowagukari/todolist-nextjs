@@ -1,4 +1,4 @@
-import { Task } from "../api/task/data";
+import { Task } from "@prisma/client";
 
 async function getData() {
   const base_url =
