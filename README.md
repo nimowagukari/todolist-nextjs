@@ -6,13 +6,15 @@
 
 次回やること：
 
-- autoincrement カラムを省略した create で Uique constraint failed on the fields エラーが出る件の対処
-- route.ts で API 実装
-  - delete
-- API テストコード作成＆自動テスト
+- status を変更できるようにする
+  - クリックしたら値を変更できるようにする
 
 その次やること：
 
+- autoincrement カラムを省略した create で Unique constraint failed on the fields エラーが出る件の対処
+- route.ts で API 実装
+  - delete
+- API テストコード作成＆自動テスト
 - エラーハンドリング
   - prisma 操作周りに try/catch 追加
   - クエリ実行完了後に disconnect する処理を追加
