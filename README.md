@@ -6,11 +6,12 @@
 
 次回やること：
 
-- status を変更できるようにする
-  - クリックしたら値を変更できるようにする
+- Loading 表示を出す
 
 その次やること：
 
+- status を変更できるようにする
+  - クリックしたら値を変更できるようにする
 - autoincrement カラムを省略した create で Unique constraint failed on the fields エラーが出る件の対処
 - route.ts で API 実装
   - delete
