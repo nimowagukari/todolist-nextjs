@@ -12,18 +12,29 @@ export default function TaskDashboard({ base_url }: { base_url: string }) {
   const [tasks, setTasks] = useState<Task[]>([]);
 
   useEffect(() => {
+    const controller = new AbortController();
+    const signal = controller.signal;
     const fetchTasks = async () => {
       try {
-        const res = await fetch(`${base_url}/api/task`, { cache: "no-store" });
+        const res = await fetch(`${base_url}/api/task`, {
+          cache: "no-store",
+          signal,
+        });
         const data = await res.json();
         setTasks(data.tasks);
-      } catch (err) {
-        console.log(err);
-        throw new Error("Failed to fetch data");
+      } catch (err: any) {
+        if (err.name === "AbortError") {
+          console.log("Fetch canceled.");
+        } else {
+          console.log(err);
+          throw new Error("Failed to fetch data");
+        }
       }
     };
 
     fetchTasks();
+
+    return () => controller.abort();
   }, [base_url]);
 
   const handleAdd = () => {

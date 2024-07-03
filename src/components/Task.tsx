@@ -41,19 +41,16 @@ export function TaskCard({
 
   const updateEditingTaskSummary = (e: React.FocusEvent<HTMLInputElement>) => {
     setEditingTask({ ...editingTask, summary: e.target.value });
-    console.log(editingTask);
   };
 
   const updateEditingTaskStatus = (e: React.FocusEvent<HTMLInputElement>) => {
     setEditingTask({ ...editingTask, status: e.target.value });
-    console.log(editingTask);
   };
 
   const updateEditingTaskDescription = (
     e: React.FocusEvent<HTMLInputElement>,
   ) => {
     setEditingTask({ ...editingTask, description: e.target.value });
-    console.log(editingTask);
   };
 
   const [editing, setEditing] = useState(isEditing);
