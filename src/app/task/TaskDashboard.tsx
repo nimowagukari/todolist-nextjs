@@ -112,19 +112,20 @@ export default function TaskDashboard({ base_url }: { base_url: string }) {
         </Button>
       </Stack>
       <Grid container spacing={3} sx={{ margin: "20px" }}>
-        {tasks &&
-          tasks.map((task: Task) => {
-            return (
-              <Grid key={task.id} xs={12} md={4}>
-                <TaskCard
-                  task={task}
-                  onUpdate={handleUpdate}
-                  onDelete={handleDelete}
-                  isEditing={false}
-                />
-              </Grid>
-            );
-          })}
+        {tasks.length > 0
+          ? tasks.map((task: Task) => {
+              return (
+                <Grid key={task.id} xs={12} md={4}>
+                  <TaskCard
+                    task={task}
+                    onUpdate={handleUpdate}
+                    onDelete={handleDelete}
+                    isEditing={false}
+                  />
+                </Grid>
+              );
+            })
+          : null}
       </Grid>
     </>
   );
