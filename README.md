@@ -6,10 +6,14 @@
 
 次回やること：
 
-- Loading 表示を出す
+- リストの親と子でそれぞれ状態を管理する場合のテストコードを作成
 
 その次やること：
 
+- Task の Loading 表示を出す
+  - ServerActions 関数を外出し定義し、ハンドラを置き換え
+  - setTasks の型に Promise<Task[]> を追加
+  - Task 変更中の Progress 表示を追加
 - status を変更できるようにする
   - クリックしたら値を変更できるようにする
 - autoincrement カラムを省略した create で Unique constraint failed on the fields エラーが出る件の対処
